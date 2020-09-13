@@ -20,7 +20,9 @@ Route::middleware(['auth:sanctum', 'verified'])->namespace('Customer')->group(fu
 | Public Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@show')->name('home');
+
+Route::get('/{category}', 'CategoryController@show')->name('category');
+
+Route::get('/{category}/{game}', 'ProductController@show')->name('product');
 

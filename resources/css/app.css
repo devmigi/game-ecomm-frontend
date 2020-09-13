@@ -1,3 +1,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@import "glide.core.css";
+@import "glide.theme.css";
+
+
+@layer utilities {
+    .h-80{
+        height: 20rem;
+    }
+}
