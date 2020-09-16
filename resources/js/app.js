@@ -7,7 +7,7 @@ import Glide from '@glidejs/glide';
 let glide = new Glide('.glide', {
     type: 'carousel',
     hoverpause: true,
-    autoplay: 2000,
-    perView: 2
+    autoplay: 4000,
+    perView: 1
 });
 glide.mount();

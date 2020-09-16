@@ -24934,7 +24934,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"]('.glide', {
   type: 'carousel',
   hoverpause: true,
-  autoplay: 2000,
+  autoplay: 4000,
   perView: 1
 });
 glide.mount();
