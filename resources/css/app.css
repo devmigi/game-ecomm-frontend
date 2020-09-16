@@ -17,5 +17,5 @@
 }
 
 .top-menu-link {
-    @apply text-gray-900 p-1 mx-2;
+    @apply text-white p-1 mx-2 text-sm;
 }
