@@ -5,12 +5,12 @@
 @section('content')
     <div class="flex">
         @foreach($categories as $category)
-            <a href="#" class="p-1 lg:py-4 m-1 lg:m-2 flex flex-col lg:flex-row flex-1 justify-start lg:justify-center text-center bg-gray-100 hover:bg-gray-200">
+            <a href="#" class="p-1 lg:py-4 m-1 lg:m-2 flex flex-col lg:flex-row flex-1 justify-start lg:justify-center text-center lg:bg-gray-100 hover:bg-gray-200">
                 <div>
-                    <img src="{{ $category->image->web_url }}" class="w-16 lg:w-12 m-auto lg:mr-2 rounded border border-gray-100"  alt="">
+                    <img src="{{ $category->image->web_url }}" class="w-14 lg:w-12 m-auto lg:mr-2 rounded border border-gray-100"  alt="">
 
                 </div>
-                <div class="mt-2 text-xs md:text-lg">
+                <div class="my-2 text-xs md:text-lg">
                     {{ $category->name }}
                 </div>
             </a>

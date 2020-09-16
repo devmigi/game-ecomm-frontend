@@ -1,6 +1,6 @@
 <nav class="flex items-center justify-between flex-wrap bg-gray-100 py-4 px-6" x-data="{isOpen : false}">
     <div class="flex items-center flex-shrink-0 text-gray mr-6">
-        <img src="/images/logo-text.png" class="h-6 md:h-8" alt="Gamelelo">
+        <img src="/images/logo-text.png" class="h-4 sm:h-6 md:h-8" alt="Gamelelo">
     </div>
 
 
