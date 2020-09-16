@@ -24931,13 +24931,43 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"]('.glide', {
-  type: 'carousel',
-  hoverpause: true,
-  autoplay: 4000,
-  perView: 1
-});
-glide.mount();
+var sliders = document.querySelectorAll('.slider');
+
+for (var i = 0; i < sliders.length; i++) {
+  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"](sliders[i], {
+    type: 'carousel',
+    hoverpause: true,
+    autoplay: 4000,
+    perView: 1
+  });
+  glide.mount();
+}
+
+var carousels = document.querySelectorAll('.carousel');
+
+for (var i = 0; i < carousels.length; i++) {
+  var carousel = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_1__["default"](carousels[i], {
+    type: 'carousel',
+    hoverpause: true,
+    // autoplay: 6000,
+    perView: 5,
+    breakpoints: {
+      1024: {
+        perView: 5
+      },
+      960: {
+        perView: 4
+      },
+      720: {
+        perView: 3
+      },
+      480: {
+        perView: 2
+      }
+    }
+  });
+  carousel.mount();
+}
 
 /***/ }),
 

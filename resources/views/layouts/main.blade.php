@@ -25,6 +25,7 @@
 
     @yield('content')
 
+    @include('shared.footer')
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 

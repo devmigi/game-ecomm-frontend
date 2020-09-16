@@ -21,12 +21,12 @@ class HomeController extends Controller
 
         $page = Page::where('name', $pageName)->with('sections.items.image')->first();
 
-        $sliders = $page->sections[0]['items'];
+        $sections = $page->sections;
 
         $categories = $this->categoryRepository->all();
 
 
-        return view('pages.home', ['categories' => $categories, 'sliders' => $sliders]);
+        return view('pages.home', ['categories' => $categories, 'sections' => $sections]);
     }
 
 

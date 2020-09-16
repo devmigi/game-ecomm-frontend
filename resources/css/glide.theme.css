@@ -5,10 +5,10 @@
   z-index: 2;
   color: white;
   text-transform: uppercase;
-  padding: 9px 12px;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
+  padding: 9px 11px;
+  background-color: rgba(22, 22, 22, .3);
+  /*border: 2px solid rgba(255, 255, 255, 0.5);*/
+  border-radius: 50%;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   opacity: 1;
@@ -21,11 +21,11 @@
   .glide__arrow:hover {
     border-color: white; }
   .glide__arrow--left {
-    left: 2em; }
+    left: -1.3em; }
   .glide__arrow--right {
-    right: 2em; }
+    right: -1.3em; }
   .glide__arrow--disabled {
-    opacity: 0.33; }
+    opacity: 0.53; }
 
 .glide__bullets {
   position: absolute;
