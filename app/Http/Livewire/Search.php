@@ -13,7 +13,7 @@ class Search extends Component
     public function render()
     {
         if($this->query){
-            $this->products = Product::where('keywords', 'like', "%$this->query%")->limit(8)->get();
+            $this->products = Product::where('keywords', 'like', "%$this->query%")->with('images.image')->limit(6)->get();
         }
         return view('livewire.search');
     }

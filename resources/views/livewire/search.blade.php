@@ -13,8 +13,19 @@
     <div class="absolute bg-white w-full z-10" style="top: 38px;">
         @foreach($products as $product)
             <a href="/{{ $product->slug }}">
-                <div class="py-1 text-gray-900 px-4 py-2 hover:bg-gray-100" style="border-bottom: 1px solid #f8f8f8">
-                    {{ $product->name }}
+                <div class=" flex py-1 text-gray-900 px-4 py-2 hover:bg-gray-100" style="border-bottom: 1px solid #f8f8f8">
+                    <img src="{{ $product->images[0]->image->web_url }}" class="h-12" alt="">
+                    <div class="ml-4 text-sm">
+                        <div>
+                            {{ $product->name }}
+                        </div>
+                        <div class="py-1">
+                            {{--@if($product->selling_price < $product->mrp)--}}
+                                {{--<span class="line-through text-sm text-gray-600">₹{{ $product->mrp }}</span>--}}
+                            {{--@endif--}}
+                            <span class="font-semibold text-xs text-gray-700">₹{{ $product->selling_price }}</span>
+                        </div>
+                    </div>
                 </div>
             </a>
         @endforeach
