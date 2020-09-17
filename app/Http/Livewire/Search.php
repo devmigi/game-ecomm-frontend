@@ -15,6 +15,9 @@ class Search extends Component
         if($this->query){
             $this->products = Product::where('keywords', 'like', "%$this->query%")->with('images.image')->limit(6)->get();
         }
+        else{
+            $this->products = [];
+        }
         return view('livewire.search');
     }
 
