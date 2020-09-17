@@ -44,7 +44,7 @@
         @elseif($section->type == 'product_carousel')
             <section class="px-2 md:px-8">
                 @if($section->title)
-                    <h2 class="section-title pt-0 pb-3 md:pt-2 text-xl">{{ $section->title }}</h2>
+                    <h2 class="section-title pt-2 pb-3 md:pt-2 text-base lg:text-xl">{{ $section->title }}</h2>
                 @endif
 
                 <div class="glide carousel">
