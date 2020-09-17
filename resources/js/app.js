@@ -37,7 +37,7 @@ for (var i = 0; i < carousels.length; i++) {
                 perView: 3
             },
             480: {
-                perView: 2
+                perView: 3
             }
         }
     });

@@ -19,7 +19,7 @@
     @foreach($sections as $section)
 
         @if($section->type == 'item_slider')
-           <section class="mb-4">
+           <section class="mb-2">
                @if($section->title)
                    <h2 class="section-title py-2 text-xl">{{ $section->title }}</h2>
                @endif
@@ -44,7 +44,7 @@
         @elseif($section->type == 'product_carousel')
             <section class="px-2 md:px-8">
                 @if($section->title)
-                    <h2 class="section-title py-3 text-xl">{{ $section->title }}</h2>
+                    <h2 class="section-title pt-0 pb-3 md:pt-2 text-xl">{{ $section->title }}</h2>
                 @endif
 
                 <div class="glide carousel">
@@ -55,13 +55,13 @@
                                     <a href="/{{ $item->product->category->slug . '/' . $item->product->slug }}">
                                         <div class="mx-2">
                                             <img class="h-auto w-full object-cover" src="{{ $item->image->web_url }}" alt="">
-                                            <div class="pb-1 pt-3">
-                                                @if($item->product->selling_price < $item->product->mrp)
-                                                    <span class="line-through text-sm text-gray-600">₹{{ $item->product->mrp }}</span>
-                                                @endif
+                                            <div class="pb-1 pt-3 text-sm lg:text-base">
                                                 <span class="font-semibold text-gray-900">₹{{ $item->product->selling_price }}</span>
+                                                @if($item->product->selling_price < $item->product->mrp)
+                                                    <span class="ml-1 line-through text-sm text-gray-600">₹{{ $item->product->mrp }}</span>
+                                                @endif
                                             </div>
-                                            <div class="text-base">{{ $item->product->name }}</div>
+                                            <div class="text-xs lg:text-base">{{ $item->product->name }}</div>
                                         </div>
                                     </a>
                                 </li>
