@@ -18,4 +18,10 @@ class PageSectionItem extends Model
         return $this->belongsTo('App\Models\PageSection', 'page_section_id', 'id');
     }
 
+
+    public function product()
+    {
+        return $this->belongsTo('App\Models\Product', 'item_id', 'id');
+    }
+
 }
