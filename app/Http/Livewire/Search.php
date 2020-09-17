@@ -18,4 +18,9 @@ class Search extends Component
         return view('livewire.search');
     }
 
+    public function clear(){
+        $this->query = '';
+        $this->products = [];
+    }
+
 }
