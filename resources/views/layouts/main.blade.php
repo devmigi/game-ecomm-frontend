@@ -8,7 +8,7 @@
     <title>{{ config('app.name', 'Gamelelo') }}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -19,7 +19,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 </head>
-<body id="app" class="font-light">
+<body id="app" class="text-sm text-gray-900">
 
     @include('shared.header')
 
