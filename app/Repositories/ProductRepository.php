@@ -31,10 +31,22 @@ class ProductRepository implements ProductRepositoryInterface
         $product = Cache::rememberForever("products.{$categorySlug}-{$productSlug}", function () use ($categorySlug, $productSlug) {
             $category = Category::where('slug', $categorySlug)->first();
 
-            return Product::where('slug', $productSlug)->where('category_id', $category->id)
+            $productData = Product::where('slug', $productSlug)->where('category_id', $category->id)
                 ->with(['images.image', 'attributes', 'category'])->first();
+
+            return $productData;
         });
 
         return $product;
+    }
+
+
+    public function getVersions($id){
+        $products = Cache::rememberForever("products.{$id}-versions", function () use ($id) {
+            $product = Product::find($id);
+            return Product::where('parent_id', $product->parent_id)->where('id', '<>', $id)->with('category')->get();
+        });
+
+        return $products;
     }
 }

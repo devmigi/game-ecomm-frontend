@@ -9,4 +9,6 @@ interface ProductRepositoryInterface
     public function getById($id);
 
     public function getBySlug($categorySlug, $productSlug);
+
+    public function getVersions($id);
 }

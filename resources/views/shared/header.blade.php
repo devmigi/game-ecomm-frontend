@@ -1,6 +1,8 @@
 <nav class="flex items-center justify-between flex-wrap  bg-blue-900 text-white py-3 px-2 md:px-4" x-data="{isOpen : false}">
     <div class="flex items-center flex-shrink-0 mr-1 md:mr-6">
-        <img src="/img/logo.svg" class="h-8 md:h-10" style="color:#fff" alt="Gamelelo">
+        <a href="/">
+            <img src="/img/logo.svg" class="h-8 md:h-10" style="color:#fff" alt="Gamelelo">
+        </a>
     </div>
 
     @livewire('search')

@@ -18,10 +18,9 @@ class ProductController extends Controller
 
         $product = $this->productRepository->getBySlug($categorySlug, $productSlug);
 
-        dd($product->toArray());
+        $productVersions = $this->productRepository->getVersions($product->id);
 
-
-        return view('pages.product', []);
+        return view('pages.product', ['product' => $product, 'productVersions' => $productVersions]);
     }
 
 }
